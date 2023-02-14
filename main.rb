@@ -1,7 +1,7 @@
 require('./menu')
 
+# rubocop:disable Metrics/CyclomaticComplexity
 def main
-  # rubocop:disable Metrics/MethodLength
   puts 'Welcome to my Catalog of things'
   flag = true
   while flag
@@ -37,7 +37,6 @@ def main
       flag = false
     end
   end
-  # rubocop:enable Metrics/MethodLength
 end
-
 main
+# rubocop:enable Metrics/CyclomaticComplexity
