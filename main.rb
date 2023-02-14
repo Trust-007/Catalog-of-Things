@@ -1,6 +1,5 @@
 require('./menu')
 
-# rubocop:disable Metrics/CyclomaticComplexity
 def main
   puts 'Welcome to my Catalog of things'
   flag = true
@@ -8,22 +7,6 @@ def main
     puts menu
     choice = gets.chomp
     case choice
-    when '1'
-      puts 'Book list coming soon'
-    when '2'
-      puts 'Music albums coming soon'
-    when '3'
-      puts 'Movies coming soon'
-    when '4'
-      puts 'Games coming soon'
-    when '5'
-      puts 'All genres coming soon'
-    when '6'
-      puts 'All labels comming soon'
-    when '7'
-      puts 'All others coming soon'
-    when '8'
-      puts 'All sources will be here'
     when '9'
       puts 'You cannot add a book now'
     when '10'
@@ -39,4 +22,3 @@ def main
   end
 end
 main
-# rubocop:enable Metrics/CyclomaticComplexity
