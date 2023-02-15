@@ -12,7 +12,11 @@ describe Author do
 
         it 'item1 should be in author1 items array' do
             author1.add_item(item1)
-            expect(author1.items[0]).to eq(item1)
+            expect(author1.items[0]).to be(item1)
+        end
+
+        it 'item1.author should be equal to author1' do
+            expect(item1.author).to be(author1)
         end
     end
 end
