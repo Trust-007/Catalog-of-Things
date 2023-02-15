@@ -1,6 +1,8 @@
 class Item
-  def initialize(id, publish_date, archived: false)
-    @id = id
+  attr_reader :id, :archived, :publish_date
+
+  def initialize(publish_date, archived: false)
+    @id = rand(1..1000)
     @publish_date = publish_date
     @archived = archived
   end
