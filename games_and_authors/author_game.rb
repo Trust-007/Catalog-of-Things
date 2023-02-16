@@ -1,16 +1,21 @@
 require_relative 'game'
 require_relative 'author'
 require 'date'
+require 'json'
 
 class GameAndAuthors
    attr_reader :authors, :games
 
    def initialize
       base = "#{Dir.pwd}/saved_data"
-      books_reader = File.read("#{base}/books.json")
-      people_reader = File.read("#{base}/people.json")
+      authors_reader = File.read("#{base}/authors.json")
+      games_reader = File.read("#{base}/games.json")
+
       @authors = []
+      JSON.parse(authors_reader).each { |x| @authors.push(Author.new(x['first_name'], x['last_name'])) } unless authors_reader == ''
+
       @games = []
+      JSON.parse(games_reader).each { |x| @games.push(Game.new(x['publish_date'], x['multiplayer'], x['last_played_at'] )) } unless authors_reader == ''
    end
 
    def list_authors
