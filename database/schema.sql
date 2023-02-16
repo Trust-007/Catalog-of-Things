@@ -1,0 +1,11 @@
+CREATE TABLE genre (
+  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+  name VARCHAR
+);
+
+CREATE TABLE musicAlbum (
+  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  publish_date DATE,
+  on_spotify BOOLEAN,
+  genre_id INT REFERENCES genre(id)
+);

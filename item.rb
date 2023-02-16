@@ -1,4 +1,7 @@
+require 'date'
 class Item
+  attr_reader :publish_date
+
   def initialize(id, publish_date, archived: false)
     @id = id
     @publish_date = publish_date
@@ -26,7 +29,7 @@ class Item
   end
 
   def can_be_archived?
-    @publish_date > 10
+    @publish_date < Date.today - (10 * 365)
   end
 
   def move_to_archive
