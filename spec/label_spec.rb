@@ -16,7 +16,7 @@ describe Label do
 
   describe '#add_item' do
     let(:label) { Label.new(1, 'Label 1', 'red') }
-    let(:item) { double('item') }
+    let(:item) { double('item').as_null_object }
     it "sets the item's label to the current label" do
       allow(item).to receive(:label=)
       label.add_item(item)

@@ -8,5 +8,10 @@
     "id": 2,
     "date": "2023-05-11",
     "archived": false
+  },
+  {
+    "id": "#[Double \"item\"]",
+    "date": "#[Double \"item\"]",
+    "archived": "#[Double \"item\"]"
   }
 ]
