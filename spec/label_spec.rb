@@ -1,4 +1,4 @@
-require('./label')
+require('./label/label')
 
 describe Label do
   context 'When testing the Label class' do

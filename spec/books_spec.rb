@@ -1,5 +1,5 @@
 require 'date'
-require('./book')
+require('./book/book')
 
 describe Book do
   context 'Testing the Book class creation' do

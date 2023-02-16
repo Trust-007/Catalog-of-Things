@@ -1,4 +1,7 @@
 class Item
+  attr_accessor :label, :publish_date, :archived
+  attr_reader :id
+
   def initialize(id, publish_date, archived: false)
     @id = id
     @publish_date = publish_date
