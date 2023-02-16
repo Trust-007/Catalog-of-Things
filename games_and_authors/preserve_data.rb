@@ -20,7 +20,9 @@ end
 def write_games(array)
   base = "#{Dir.pwd}/saved_data"
   empty_array = []
-  array.each { |e| empty_array.push({ publish_date: e.publish_date, multiplayer: e.multiplayer, last_played_at: e.last_played_at }) }
+  array.each do |e|
+    empty_array.push({ publish_date: e.publish_date, multiplayer: e.multiplayer, last_played_at: e.last_played_at })
+  end
   File.write("#{base}/games.json", empty_array.to_json, mode: 'w')
 end
 
