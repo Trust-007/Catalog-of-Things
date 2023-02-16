@@ -16,5 +16,3 @@ class Book < Item
   end
 end
 
-one = Book.new('1', Date.iso8601('2023-10-01'), 'Nrb Publishers', 'Bad')
-puts one.can_be_archived?
