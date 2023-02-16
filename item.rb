@@ -29,7 +29,8 @@ class Item
   end
 
   def can_be_archived?
-    @publish_date < Date.today - (10 * 365)
+    time_elapsed = (Date.today - @publish_date).to_i
+    return true unless (time_elapsed / 365) < 10
   end
 
   def move_to_archive
