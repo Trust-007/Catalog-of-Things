@@ -64,7 +64,7 @@
 
 ## 🚀 Project Video <a name="live-demo"></a>
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://drive.google.com/file/d/1ngD4O-hIEZdi9d_CN12T4QMwILjWE3Np/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
