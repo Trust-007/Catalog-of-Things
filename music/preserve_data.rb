@@ -3,7 +3,6 @@ require 'json'
 def store_albums(music_albums)
   File.write('music_album.json', JSON.pretty_generate(music_albums.map do |album|
     { on_spotify: album['album'].on_spotify,
-      id: album['album'].id,
       publish_date: album['album'].publish_date,
       genre: album['genre'] }
   end))
@@ -19,7 +18,7 @@ def read_albums
 
   JSON.parse(File.read('music_album.json')).map do |album|
     {
-      'album' => MusicAlbum.new(album['on_spotify'], album['id'], album['publish_date']),
+      'album' => MusicAlbum.new(album['on_spotify'], album['publish_date']),
       'genre' => album['genre']
     }
   end

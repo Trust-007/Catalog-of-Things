@@ -1,73 +1,61 @@
 [
   {
     "on_spotify": true,
-    "id": 1,
     "publish_date": "2002",
     "genre": null
   },
   {
     "on_spotify": true,
-    "id": 2,
     "publish_date": "2001",
     "genre": "go abeg"
   },
   {
     "on_spotify": true,
-    "id": 3,
     "publish_date": "2001",
     "genre": "God did"
   },
   {
     "on_spotify": true,
-    "id": 4,
     "publish_date": "2002-02-12",
     "genre": "faq"
   },
   {
     "on_spotify": false,
-    "id": 5,
     "publish_date": "1199-03-12",
     "genre": "Gas"
   },
   {
     "on_spotify": true,
-    "id": 6,
     "publish_date": "1995-20-12",
     "genre": "Karoke"
   },
   {
     "on_spotify": "1",
-    "id": 7,
     "publish_date": "22",
     "genre": "Aba"
   },
   {
     "on_spotify": true,
-    "id": 8,
     "publish_date": "2007-05-12",
     "genre": "Doshado"
   },
   {
     "on_spotify": false,
-    "id": 9,
     "publish_date": "2023",
     "genre": "Ify japan"
   },
   {
     "on_spotify": true,
-    "id": 10,
     "publish_date": "2020-12-33",
     "genre": "westler"
   },
   {
     "on_spotify": true,
-    "id": 11,
     "publish_date": "4040-32-3",
     "genre": "Nonsense"
   },
   {
     "on_spotify": true,
-    "id": 12,
     "publish_date": "2023-12-23",
     "genre": "testing"
   }

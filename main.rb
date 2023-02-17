@@ -5,7 +5,7 @@ require './games_and_authors/preserve_data'
 def main
   puts 'Welcome to my Catalog of things'
   menu = Menu.new
-  menu.run
+  # menu.run
   author_game = GameAndAuthors.new
   flag = true
   while flag
@@ -25,6 +25,5 @@ def main
   end
   write_data('authors', author_game.authors)
   write_data('games', author_game.games)
-
 end
 main

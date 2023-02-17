@@ -41,8 +41,6 @@ class Menu
         list_genre
       when 10
         add_album
-      when 12
-        'under construction'
       when 13
         library
         puts 'Thank for you using this app'
@@ -87,10 +85,9 @@ class Menu
   end
 
   def create_album(on_spotify)
-    id = @music_albums.count + 1
     puts 'Enter album published_date'
     publish_date = gets.chomp
-    MusicAlbum.new(on_spotify, id, publish_date)
+    MusicAlbum.new(on_spotify, publish_date)
   end
 
   def ask_genre
