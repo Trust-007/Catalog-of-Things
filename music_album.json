@@ -1,0 +1,82 @@
+[
+  {
+    "on_spotify": true,
+    "publish_date": "2002",
+    "genre": null
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2001",
+    "genre": "go abeg"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2001",
+    "genre": "God did"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2002-02-12",
+    "genre": "faq"
+  },
+  {
+    "on_spotify": false,
+    "publish_date": "1199-03-12",
+    "genre": "Gas"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "1995-20-12",
+    "genre": "Karoke"
+  },
+  {
+    "on_spotify": "1",
+    "publish_date": "22",
+    "genre": "Aba"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2007-05-12",
+    "genre": "Doshado"
+  },
+  {
+    "on_spotify": false,
+    "publish_date": "2023",
+    "genre": "Ify japan"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2020-12-33",
+    "genre": "westler"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "4040-32-3",
+    "genre": "Nonsense"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2023-12-23",
+    "genre": "testing"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2002-20-21",
+    "genre": "Yoga"
+  },
+  {
+    "on_spotify": false,
+    "publish_date": "1800-03-4",
+    "genre": "Fabb"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2002-20-12",
+    "genre": "Sudoko"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2002-20-12",
+    "genre": "Karoke doki"
+  }
+]
