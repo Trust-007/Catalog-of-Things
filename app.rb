@@ -1,14 +1,15 @@
 require './games_and_authors/author_game'
 require './games_and_authors/preserve_data'
+require './book/user_input'
 require './music/user_input'
-
+require './label/save_item'
 class App
   def initialize
     @author_game = GameAndAuthors.new
+    @book_label = BookLabel.new
     @music_genre = MusicGenre.new
   end
 
-  # menu_list provides a list of different options a user can select from
   def menu_list
     puts "\nWelcome to our Catalog app"
     puts "Please choose options below:
@@ -24,7 +25,6 @@ class App
  10. Exit"
   end
 
-  # this method calls specific method depending on the user selection
   def selection_cases
     loop do
       menu_list
@@ -35,7 +35,6 @@ class App
       end
       if selection == 10
         puts 'Thanks for using this app'
-        # add your file save logic here
         write_data('authors', @author_game.authors)
         write_data('games', @author_game.games)
         break
@@ -44,26 +43,31 @@ class App
     end
   end
 
-  # add your methods here
+  # rubocop:disable Metrics/CyclomaticComplexity
   def menu_cases(selection)
     case selection
+    when 1
+      @book_label.list_books
     when 2
       @music_genre.list_album
     when 3
       @author_game.list_games
     when 4
       @music_genre.list_genre
+    when 5
+      @book_label.list_labels
     when 6
       @author_game.list_authors
+    when 7
+      @book_label.add_book
     when 8
       @music_genre.add_album
     when 9
       @author_game.add_game
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 
-  # ask user for input
-  # @return the input
   def input
     gets.chomp.to_i
   end
