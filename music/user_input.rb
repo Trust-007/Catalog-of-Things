@@ -1,52 +1,13 @@
-require './music/genre'
-require './music/music_album'
-require './music/preserve_data'
-class Menu
+require './genre'
+require './music_album'
+require './preserve_data'
+
+class App
   def initialize
     @read_genre = read_genre
     @genres = read_genre || []
     @read_albums = read_albums
     @music_albums = read_albums || []
-  end
-
-  def run
-    select_contents
-  end
-
-  def contents
-    "\nKindly choose a service:\n" \
-      "1 - List all books \n" \
-      "2 - List all music albums \n" \
-      "3 - List all movies \n" \
-      "4 - List of games \n" \
-      "5 - List all genres \n" \
-      "6 - List all labels \n" \
-      "7 - List all authors \n" \
-      "8 - List all sources \n" \
-      "9 - Add a book \n" \
-      "10 - Add a music album \n" \
-      "11 - Add a movie \n" \
-      "12 - Add a game \n" \
-      "13 - Exit \n" \
-  end
-
-  def select_contents
-    loop do
-      puts contents
-      choice = gets.chomp.to_i
-      case choice
-      when 2
-        list_album
-      when 5
-        list_genre
-      when 10
-        add_album
-      when 13
-        library
-        puts 'Thank for you using this app'
-        return
-      end
-    end
   end
 
   def list_genre
