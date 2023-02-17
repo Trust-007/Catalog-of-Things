@@ -1,18 +1,23 @@
 [
   {
-    "id": 1,
-    "date": "2023-10-01",
-    "archived": false
+    "title": null,
+    "color": null
   },
   {
-    "id": 2,
-    "date": "2023-05-11",
-    "archived": false
+    "title": null,
+    "color": null
   },
   {
-    "id": "#[Double \"item\"]",
-    "date": "#[Double \"item\"]",
-    "archived": "#[Double \"item\"]"
+    "title": null,
+    "color": null
+  },
+  {
+    "title": null,
+    "color": null
+  },
+  {
+    "title": "News",
+    "color": "Yellow"
   },
   {
     "id": "#[Double \"item\"]",

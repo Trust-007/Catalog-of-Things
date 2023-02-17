@@ -2,9 +2,8 @@ require('./label/label')
 
 describe Label do
   context 'When testing the Label class' do
-    label = Label.new('1', 'string', 'yellow')
+    label = Label.new('string', 'yellow')
     it 'Test Object creation' do
-      expect(label.id).to eq('1')
       expect(label.title).to eq('string')
       expect(label.color).to eq('yellow')
     end
@@ -15,7 +14,7 @@ describe Label do
   end
 
   describe '#add_item' do
-    let(:label) { Label.new(1, 'Label 1', 'red') }
+    let(:label) { Label.new('Label 1', 'red') }
     let(:item) { double('item').as_null_object }
     it "sets the item's label to the current label" do
       allow(item).to receive(:label=)
