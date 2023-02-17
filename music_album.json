@@ -68,5 +68,10 @@
     "on_spotify": false,
     "publish_date": "1800-03-4",
     "genre": "Fabb"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2002-20-12",
+    "genre": "Sudoko"
   }
 ]
