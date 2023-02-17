@@ -1,12 +1,13 @@
 require './games_and_authors/author_game'
 require './games_and_authors/preserve_data'
+require './music/user_input'
 
 class App
-
   def initialize
-        @author_game = GameAndAuthors.new
+    @author_game = GameAndAuthors.new
+    @music_genre = MusicGenre.new
   end
-    
+
   # menu_list provides a list of different options a user can select from
   def menu_list
     puts "\nWelcome to our Catalog app"
@@ -42,16 +43,22 @@ class App
       menu_cases(selection)
     end
   end
-  
+
   # add your methods here
   def menu_cases(selection)
     case selection
+    when 2
+      @music_genre.list_album
     when 3
-        @author_game.list_games
+      @author_game.list_games
+    when 4
+      @music_genre.list_genre
     when 6
-        @author_game.list_authors
+      @author_game.list_authors
+    when 8
+      @music_genre.add_album
     when 9
-        @author_game.add_game
+      @author_game.add_game
     end
   end
 
@@ -61,4 +68,3 @@ class App
     gets.chomp.to_i
   end
 end
-

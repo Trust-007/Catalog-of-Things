@@ -1,8 +1,8 @@
-require './genre'
-require './music_album'
-require './preserve_data'
+require_relative 'genre'
+require_relative 'music_album'
+require_relative 'preserve_data'
 
-class App
+class MusicGenre
   def initialize
     @read_genre = read_genre
     @genres = read_genre || []
@@ -30,7 +30,7 @@ class App
 
     add_to_genre(album, genre)
     add_to_music_albums(music_album)
-    store_albums(@music_albums)
+    library
 
     puts 'Album created successfully'
   end
