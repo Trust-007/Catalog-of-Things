@@ -1,9 +1,10 @@
 require 'date'
-class Item
-  attr_reader :publish_date
 
-  def initialize(id, publish_date, archived: false)
-    @id = id
+class Item
+  attr_reader :id, :archived, :publish_date, :genre, :author, :source, :label
+
+  def initialize(publish_date, archived: false)
+    @id = rand(1..1000)
     @publish_date = publish_date
     @archived = archived
   end
@@ -29,7 +30,8 @@ class Item
   end
 
   def can_be_archived?
-    @publish_date < Date.today - (10 * 365)
+    time_elapsed = (Date.today - @publish_date).to_i
+    (time_elapsed / 365) >= 10
   end
 
   def move_to_archive
