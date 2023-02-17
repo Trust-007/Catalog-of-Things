@@ -4,7 +4,7 @@ require './games_and_authors/preserve_data'
 class App
 
   def initialize
-        author_game = GameAndAuthors.new
+        @author_game = GameAndAuthors.new
   end
     
   # menu_list provides a list of different options a user can select from
@@ -23,9 +23,8 @@ class App
  10. Exit"
   end
 
-  # this method calls specifc method depending on the user selection
+  # this method calls specific method depending on the user selection
   def selection_cases
-    cases = menu_cases
     loop do
       menu_list
       selection = input
@@ -33,30 +32,27 @@ class App
         puts 'Wrong answer, please choose a number between 1-10: '
         selection = input
       end
-      method = cases[selection]
-      if method == :exit
+      if selection == 10
         puts 'Thanks for using this app'
-        write_data('authors', author_game.authors)
-        write_data('games', author_game.games)
+        # add your file save logic here
+        write_data('authors', @author_game.authors)
+        write_data('games', @author_game.games)
         break
       end
-      send(method)
+      menu_cases(selection)
     end
   end
-
-  def menu_cases
-    {
-      1 => 'list books',
-      2 => 'list music',
-      3 => author_game.list_games,
-      4 => 'list genre',
-      5 => 'list labels',
-      6 => author_game.list_authors,
-      7 => 'add book',
-      8 => 'add music_album',
-      9 => authoradd_game,
-      10 => :exit
-    }
+  
+  # add your methods here
+  def menu_cases(selection)
+    case selection
+    when 3
+        @author_game.list_games
+    when 6
+        @author_game.list_authors
+    when 9
+        @author_game.add_game
+    end
   end
 
   # ask user for input
