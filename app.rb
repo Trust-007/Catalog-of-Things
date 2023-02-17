@@ -1,10 +1,11 @@
 require './games_and_authors/author_game'
 require './games_and_authors/preserve_data'
-
+require './book/user_input'
 class App
 
   def initialize
-        @author_game = GameAndAuthors.new
+    @author_game = GameAndAuthors.new
+    @book_label = BookLabel.new
   end
     
   # menu_list provides a list of different options a user can select from
