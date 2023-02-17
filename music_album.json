@@ -58,5 +58,25 @@
     "on_spotify": true,
     "publish_date": "2023-12-23",
     "genre": "testing"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2002-20-21",
+    "genre": "Yoga"
+  },
+  {
+    "on_spotify": false,
+    "publish_date": "1800-03-4",
+    "genre": "Fabb"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2002-20-12",
+    "genre": "Sudoko"
+  },
+  {
+    "on_spotify": true,
+    "publish_date": "2002-20-12",
+    "genre": "Karoke doki"
   }
 ]
