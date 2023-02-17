@@ -1,24 +1,27 @@
 require('./menu')
+require './games_and_authors/author_game'
+require './games_and_authors/preserve_data'
 
 def main
   puts 'Welcome to my Catalog of things'
+  author_game = GameAndAuthors.new
   flag = true
   while flag
     puts menu
     choice = gets.chomp
     case choice
-    when '9'
-      puts 'You cannot add a book now'
-    when '10'
-      puts 'Music system under maientance'
-    when '11'
-      puts 'Movie system coming soon'
+    when '4'
+      author_game.list_games
+    when '7'
+      author_game.list_authors
     when '12'
-      puts 'Game section is out of service'
+      author_game.add_game
     when '13'
       puts 'Thank for you using this app'
       flag = false
     end
   end
+  write_data('authors', author_game.authors)
+  write_data('games', author_game.games)
 end
 main
